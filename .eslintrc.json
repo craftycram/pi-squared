@@ -6,6 +6,7 @@
     },
     "extends": [
         "google"
+    ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
