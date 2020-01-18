@@ -1,28 +1,41 @@
 const mqtt = require('mqtt');
 const config = require('../config.json');
 const client = mqtt.connect(`mqtt://${config.ip}`);
+const readline = require('readline');
 
-client.on('connect', function () {
-  client.subscribe('presence', function (err) {
+client.on('connect', () => {
+  client.subscribe('presence', (err) => {
     if (!err) {
-      client.publish('presence', 'Hello mqtt')
+      client.publish('presence', 'Hello mqtt');
     }
-  })
-})
+  });
+});
 
-let state = false;
-client.on('message', function (topic, message) {
+// const state = false;
+client.on('message', (topic, message) => {
   // message is Buffer
-  console.log(message.toString())
-  setInterval(function () {
-    if (state) {
+  console.log(message.toString());
+  process.stdout.write('[MQTT] sending command: > ');
+  /* setInterval( () => {
+    if (state == true) {
       state = false;
-      client.publish('led', 'true');
+      client.publish('doorButton', '1');
+      console.log('send 1');
     } else {
       state = true;
-      client.publish('led', 'false');
+      client.publish('led', '1');
+      console.log('send 0');
     }
-    console.log('send');
-  }, 1000);
-})
+  }, 1000); */
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  rl.on('line', (input) => {
+    client.publish('doorButton', input);
+    process.stdout.write('[MQTT] sending command: > ');
+  });
+});
+
 
