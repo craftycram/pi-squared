@@ -35,7 +35,7 @@ Stattdessen war die Idee jetzt, anhand von LEDs den Klostatus anzuzeigen, da es 
 
 #### Node flow
 Hier unseren Node flow. 
-![](nodeflow.jpeg)
+![](res/img/nodeflow.jpeg)
 
 ### Schritt 3 -weiterer Verlauf
 Während der Umsetzung des Projekts nutzten wir das Programm Arduino um den Code auf die ESPs zu laden. Bislang nutzten wir für die Umsetzung nur LEDs auf dem Steckbrett, um den Code zu testen.
@@ -49,7 +49,7 @@ So entschieden wir uns für die finale Umsetzung ein Schild aus Plexiglas anzufe
 Für die Umsetzung des Schildes entschieden wir uns für ein Icon von thenounproject.com. 
 Dies wurde auf das Schild gelasert, wodurch es dank Beleuchtung besser sichtbar wurde. Im Raum stand auch die Option, das Glas zu bedrucken, jedoch wurde davon abgesehen.
 
-![](glas.jpeg)
+![](res/img/glas.jpeg)
 
 ### Schritt 5 -Aufsetzen und Verbinden der Komponenten
 Nachdem das Schild für das fertige Produkt bereit war, mussten wir nur noch die einzelnen Komponenten an den richtigen Plätzen anbringen. Da der Taster für den Innenraum des Schlosses zu unzuverlässig war, wurde nach einer Lösung hierfür gesucht.
@@ -61,14 +61,14 @@ Zunächst versuchten wir, die Platine mit dem Sensor in die Türe reinzukleben. 
 So entschieden wir uns, die Platine hinten mit einem Magneten zu versehen, um es nachhaltiger einzubauen, so lässt es sich relativ einfach wieder aus der Tür entfernen. 
 Gleichzeitig hält es durch den Magneten besser.
 
-![](platinetuer2.jpeg)
+![](res/img/platinetuer2.jpeg)
 
 Da wir den ESP bislang noch nicht anders als durch ein Netzteil betreiben können, musste dieser nahe einer Steckdose platziert werden. In Zukunft planen wir dies durch eine Batterie zu betreiben. Dadurch wären wir auch unabhängig von einer nahegelegenen Steckdose.
 
-![](espklo.jpeg)
+![](res/img/espklo.jpeg)
 
 ### Das fertige Produkt
-![](final.jpeg)
+![](res/img/final.jpeg)
 
 
 ## node red installieren auf dem Mac
