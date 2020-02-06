@@ -33,7 +33,8 @@ client.on('message', (topic, message) => {
   });
 
   rl.on('line', (input) => {
-    client.publish('doorButton', input);
+    // client.publish('doorButton', input);
+    client.publish('ledWC', input);
     process.stdout.write('[MQTT] sending command: > ');
   });
 });
